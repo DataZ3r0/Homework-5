@@ -1,13 +1,23 @@
-public class Program
+public class App
 {
     public static void main(String[] args)
-    {      
-        Employee j = new Employee("John", "Lennon", 1091940, 1281980);
+{
+        Employee j = new Employee("John", "Lennon", 1091940, 81980.08);
 
-        System.out.println("Employee: " + j.id());
-        System.out.println("Name: " + j.firstName() + " " + j.lastName());
-        System.out.println("Salary: $" + j.salary());
-	}
+        System.out.println("Employee: " + j.getID());
+        System.out.println("Name: " + j.getFirstName() + " " + j.getLastName());
+        System.out.println("Salary: $" + j.getSalary());
+        j.getSalary(5);
+        System.out.println("Salaray after planned 10% raise:" + j.getSalary());
+
+        Employee m = new Employee("Michael", "Jackson", 8291958, 292009.06);
+
+        System.out.println("Employee: " + m.getID());
+        System.out.println("Name: " + m.getFirstName() + " " + m.getLastName());
+        System.out.println("Salary: $" + m.getSalary());
+        m.getSalary(15);
+        System.out.println("Salaray after planned 10% raise:" + m.getSalary());
+    }
 }
 
 public class Employee
@@ -16,22 +26,22 @@ public class Employee
     private String lastName;
     private int id;
     private double salary;
-    
+
     public Employee(String firstName, String lastName, int id, double salary)
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.fullName = fullName;
+        this.firstName = firstName;
         this.id = id;
         this.salary = salary;
 
     }
-    
+
     public String getFirstName()
     {
         return firstName;
     }
-    
+
     public String getLastName()
     {
         return lastName;
@@ -41,21 +51,21 @@ public class Employee
     {
         return firstName + " " + lastName;
     }
-    
-    public id getID() 
+
+    public int getID()
     {
         return id;
     }
-    
+
     public double getSalary()
     {
         return salary;
     }
 
-    public void raiseSalary(int percent)
+    public double getSalary(int percent)
     {
         double raiseAmount = salary * percent / 100;
         salary += raiseAmount;
+        return raiseAmount;
     }
-    
 }
