@@ -1,0 +1,70 @@
+
+public class Program
+{
+    public static void main(String[] args)
+    {      
+        Circle c1 = new Circle(5, "Red");
+
+        System.out.println("Circle 1 Stats:");
+        System.out.println("Colour:" + " " + c1.getColor());
+        System.out.println("Radius:" + " " + c1.getRadius());
+        System.out.println("Diameter:" + " " + c1.getDiameter());
+        System.out.println("Circumference:" + " " + c1.getCircumference());
+        System.out.println("Area:" + " " + c1.getArea());
+
+        System.out.println();
+        System.out.println();
+
+        Circle c2 = new Circle(8, "Blue");
+
+        System.out.println("Circle 2 Stats:");
+        System.out.println("Colour:" + " " + c2.getColor());
+        System.out.println("Radius:" + " " + c2.getRadius());
+        System.out.println("Diameter:" + " " + c2.getDiameter());
+        System.out.println("Circumference:" + " " + c2.getCircumference());
+        System.out.println("Area:" + " " + c2.getArea());
+
+	}
+}
+
+public class Circle
+{
+    private double radius;
+    private String color;
+    
+    public Circle(double radius, String color)
+    {
+        this.radius = radius;
+        this.color = color;
+    }
+    
+    public double getRadius()
+    {
+        return radius;
+    }
+    
+    public String getColor()
+    {
+        return color;
+    }
+    
+    public double getDiameter() 
+    {
+        return radius * 2;
+    }
+    
+    public double getCircumference()
+    {
+        return 2 * Math.PI * radius;
+    }
+    
+    public double getArea()
+    {
+        return Math.PI * Math.pow(radius, 2);
+    }
+    
+    public void setColor(String color)
+    {
+        this.color = color;
+    }
+}
