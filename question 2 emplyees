@@ -1,1 +1,61 @@
+public class Program
+{
+    public static void main(String[] args)
+    {      
+        Employee j = new Employee("John", "Lennon", 1091940, 1281980);
 
+        System.out.println("Employee: " + j.id());
+        System.out.println("Name: " + j.firstName() + " " + j.lastName());
+        System.out.println("Salary: $" + j.salary());
+	}
+}
+
+public class Employee
+{
+    private String firstName;
+    private String lastName;
+    private int id;
+    private double salary;
+    
+    public Employee(String firstName, String lastName, int id, double salary)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = fullName;
+        this.id = id;
+        this.salary = salary;
+
+    }
+    
+    public String getFirstName()
+    {
+        return firstName;
+    }
+    
+    public String getLastName()
+    {
+        return lastName;
+    }
+
+    public String getFullName()
+    {
+        return firstName + " " + lastName;
+    }
+    
+    public id getID() 
+    {
+        return id;
+    }
+    
+    public double getSalary()
+    {
+        return salary;
+    }
+
+    public void raiseSalary(int percent)
+    {
+        double raiseAmount = salary * percent / 100;
+        salary += raiseAmount;
+    }
+    
+}
