@@ -1,0 +1,38 @@
+public class Program {
+    public static void main(String[] args) {
+        Cat j = new Cat("Jax");
+
+        j.meow(j.getName());
+        j.scratch(j.getName());
+        j.purr(j.getName());
+        j.bites(j.getName());
+    }
+}
+
+public class Cat {
+    private String name;
+
+    Cat(String n) {
+        name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void meow(String n) {
+        System.out.println(n + " meows");
+    }
+
+    public void scratch(String n) {
+        System.out.println(n + " scratches");
+    }
+
+    public void purr(String n) {
+        System.out.println(n + " purrs");
+    }
+
+    public void bites(String n) {
+        System.out.println(n + " bites");
+    }
+}
